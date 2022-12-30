@@ -1,0 +1,135 @@
+.row:hover {
+  background-color:#b39393;
+  cursor: pointer;
+}
+
+.allBanksContainer{
+display: flex;
+flex-direction: column;
+padding: 20px 0px;
+background-color:#FF7F7F;
+}
+
+.heading{
+font-family: "Inter";
+font-weight: 700;
+font-size: 35px;
+margin-bottom: 20px;
+margin-right: 40px;
+}
+
+.searchFilter{
+display: flex;
+justify-content: center;
+}
+
+.searchFilterContainer{
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+}
+
+.searchBar{
+min-width: 250px;
+}
+
+.banksList{
+margin-bottom: 20px;
+}
+
+.pagination{
+margin: auto;
+}
+
+.progress{
+width: 100%;
+display: flex;
+justify-content: center;
+}
+
+.column{
+border-right: 1px solid black;
+}
+
+.error{
+width: 100%;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.detailsContainer{
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.backArrow{
+/* cursor: pointer; */
+margin-right: 20px;
+}
+
+.bankHeading{
+display: flex;
+justify-content: center;
+width: 100%;
+font-family: "Inter";
+font-size: 30px;
+margin-bottom: 20px;
+margin-bottom: 20px;
+}
+
+.text{
+font-family: "Inter";
+font-size: 30px;
+margin-bottom: 20px;
+}
+
+.maindiv {
+  justify-content: center;
+  height: 100%;
+  width: 65%;
+  background-color: #FFFF;
+  justify-content: center;
+  align-items: center; 
+  margin: auto;
+}
+
+.ptitle {
+ background-color: #ff8c00;
+ margin-top: 20px;
+ width: 99%;
+ height: 50px;
+ padding: 5px;
+}
+
+.borderdiv {
+  border: 1px solid;
+}
+
+.rightContent {
+  width: 30%;
+  /* background-color: #FF7F7F; */
+  margin-left: 10%;
+  text-align: left;
+  padding: 10px;
+}
+
+.leftContent {
+  width: 60%;
+
+  background-color: #ff8c00;
+}
+li
+{ 
+display:inline; 
+}  
+
+.cdiv{
+  background-color: #ff8c00;
+  color:#ff8c00;
+  height: 10px;
+}
