@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from "react";
-import axios from "axios";
 
 import { Link } from "react-router-dom";
 
 import SearchFilter from '../components/SearchFilter';
-import BanksList from '../components/BanksList';
+import EmpList from '../components/EmpList';
 import Pagination from '../components/Pagination';
 
 import {data} from '../data'; 
@@ -19,22 +18,21 @@ import '../App.css';
 
 //1. Navbar :- it has various search filters for city , category and a input field for writing query by the user 
 
-//2. BankLists :- it displays all the bank details fetched by the provided API .
+//2. EmpList :- it displays all the employee details fetched by the provided API .
 
 //3. Pagination :- it help to implement the feature of pagination , to display only specified 
-//number of banks per page 
+//number of employees per page 
 
 //4. Dynamic Pagination :- this component takes input value from user and displays only that 
-//number of banks per page 
+//number of employee per page 
 
 
-const AllBanks = () => {
+const AllEmp = () => {
     const [loading, setLoading] = useState(true);
-    // const [city, setCity] = useState("MUMBAI");    // default city as MUMBAI 
     const [category, setCategory] = useState("");
     const [searchQuery, setSearchQuery] = useState("");
     const [val,setVal]=useState(7);
-    const [bankList, setBankList] = useState([]);
+    const [empList, setEmpList] = useState([]);
     const [filteredList, setFilteredList] = useState([]);
     const [paginatedList, setPaginatedList] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
@@ -43,63 +41,55 @@ const AllBanks = () => {
     useEffect(() => {
       if (searchQuery !== "" && category !=="") {
         setFilteredList(
-          bankList.filter((bank) => {
-            return bank[category].toLowerCase().startsWith(searchQuery.toLowerCase());
+          empList.filter((emp) => {
+            return emp[category].toLowerCase().startsWith(searchQuery.toLowerCase());
           })
         );
       }
-    }, [bankList, category, searchQuery]);
+    }, [empList, category, searchQuery]);
 
 
 
     useEffect(() => {
-            setBankList(data)
+            setEmpList(data)
             setFilteredList(data)
             setLoading(false);
     },[])
 
     useEffect(() => {
-        setFilteredList(bankList);
+        setFilteredList(empList);
         if (searchQuery !== "" && category !=="") {
           setFilteredList(
-            bankList.filter((bank) => {
-              return bank[category].toLowerCase().startsWith(searchQuery.toLowerCase());
+            empList.filter((emp) => {
+              return emp[category].toLowerCase().startsWith(searchQuery.toLowerCase());
             })
           );
         }
-      }, [bankList, category, searchQuery]);
+      }, [empList, category, searchQuery]);
 
 
     useEffect(() => {
-      // setVal(val)
-        const lastPageIndex = currentPage *val;   //  Number of banks on each page : default 10 //
+        setVal(val)
+        const lastPageIndex = currentPage *val;   //  Number of employees on each page : default 10 //
         const firstPageIndex = lastPageIndex - val;
         const modilyList = filteredList.slice(firstPageIndex, lastPageIndex);
         setPaginatedList(modilyList);
       }, [filteredList, currentPage,val]);
-
-    // console.log(filteredList.push({istrue:false}));
 
     const paginate = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
 
    return (
-    <div className="allBanksContainer">
+    <div className="allEmpsContainer">
         <div className="searchFilter" >
         <div className="heading" style={{display:"flex" ,paddingRight:"20px"}}>
           <div style={{display:"flex" ,paddingRight:"20px"}}>Home</div> 
-          <div className="banksList"><Link to="/resume-app" style={{textDecoration:'none',color:'black'}}>ResumeApp</Link>
-           {/* <Favourite
-           banksList={paginatedList}
-           loading={loading}
-           /> */}
+          <div className="empsList"><Link to="/resume-app" style={{textDecoration:'none',color:'black'}}>ResumeApp</Link>
            </div>
         </div>
           <SearchFilter
-          //  city={city}
            category={category}
-          //  selectedCity={setCity}
            selectedCategory={setCategory}
            selectedSearchQuery={setSearchQuery}    
           />
@@ -108,9 +98,9 @@ const AllBanks = () => {
 
 
 
-        <div className="banksList">
-          <BanksList
-           banksList={paginatedList}
+        <div className="empsList">
+          <EmpList
+           empList={paginatedList}
            loading={loading}
            />
         </div>
@@ -131,4 +121,4 @@ const AllBanks = () => {
   );
 }
 
-export default AllBanks;
+export default AllEmp;

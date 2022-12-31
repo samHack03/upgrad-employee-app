@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+
 import {
   TableContainer,
   Table,
@@ -17,13 +17,13 @@ import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 
 
 
-//All bankLists are being displayed using this functional component . It renders all details of banks in different rows . 
-//If the data is not present it will redirect that bank details not found 
-//Material UI TableContainer is being used to display bank details in table format 
+//All empList are being displayed using this functional component . It renders all details of employee in different rows . 
+//If the data is not present it will redirect that employee details not found 
+//Material UI TableContainer is being used to display employee details in table format 
 
-const BanksList = (props) =>  {
+const EmpList = (props) =>  {
   const {
-    banksList,
+    empList,
     loading
   } = props;
 
@@ -50,7 +50,7 @@ const BanksList = (props) =>  {
               </TableRow>
             ) : 
                 <>
-                { banksList.length>0 ? banksList.map((eData)=>{
+                { empList.length>0 ? empList.map((eData)=>{
                    return (
                    <TableRow>
                   <TableCell align="center" width="150" className="column">
@@ -71,11 +71,7 @@ const BanksList = (props) =>  {
                   </TableCell>
                   <TableCell align="center" className="column">
                     <div>
-                  <FormControlLabel
-                        control={<Checkbox icon={<FavoriteBorder />} 
-                                  checkedIcon={<Favorite />}
-                          name="checkedH" />}
-                      />
+                  <FormControlLabel control={<Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite />} name="checkedH" />} />
                       </div>
                   </TableCell>
                    
@@ -85,17 +81,12 @@ const BanksList = (props) =>  {
                 <TableRow>
                   <TableCell colSpan={6}>
                    <div className="error">
-                   No such Bank exist , please fill correct details
+                   No such Employee exist , please fill correct details
                     </div>
                   </TableCell>
                 </TableRow>
                 }
                 </>
-
-               
-
-
-
             }
           </TableBody>
         </Table>
@@ -104,5 +95,5 @@ const BanksList = (props) =>  {
   );
 }
 
-export default BanksList;
+export default EmpList;
 

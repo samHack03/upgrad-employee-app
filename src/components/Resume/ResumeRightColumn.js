@@ -1,31 +1,11 @@
 import React from "react";
 
-import {data} from '../../data';
-
 import '../../css/styles.css';
 
- 
-//This component is build to display all the bank details user has liked .
-
-
-//It check if the heart icon is active or not ,
-// if it is active it will display all the favourite banks 
-//else it will display no data found  
-
-const ResumeHeader= (props) =>  {
-
- let eData=data[0];
-
+const ResumeRightColumn= () =>  {
 
   return (
-    <div style={{display:"flex",margin:"10px"}}>
-
-
-     
-
-    <div className="leftContent">
-     right
-    </div>
+ 
 
     <div className="rightContent">
 
@@ -54,6 +34,13 @@ const ResumeHeader= (props) =>  {
                 <li>B. Tech Computer Science</li><br/>
                 <li>CGPA : 9.73</li>
             </ul>
+            <p><b>• SARVODAYA VIDYALAYA</b></p>
+            <ul>
+                <li><b>CBSE</b></li>
+                <br/>
+                <li><b>PCMB</b></li> <br/>
+                <li>PERCENTAGE : 92</li>
+            </ul>
         </div>
 
         <div className="cdiv"></div>
@@ -77,7 +64,9 @@ const ResumeHeader= (props) =>  {
                 <li>• University Rank 5 - Semester 1 </li>  <br/>
                 <li>• 3rd RunnerUp Pep Hackathon</li>  <br/>
                 <li>• Head #define technical society</li> <br/>
-                <li>• Codechef rating 1645</li>
+                <li>• Google DevFest'21  Quiz Winner</li><br/>
+                <li>• Codechef rating 1645</li> <br/>
+                <li>• Developed Bodh Journal BPIT website</li>
             </ul>
         </div>
 
@@ -89,14 +78,13 @@ const ResumeHeader= (props) =>  {
                 <li>• Contributed in GWOC’21, GSSOC’21</li>  <br/>
                 <li>• Contributed in HacktoberFest’21 </li>  <br/>
             </ul>
+            <div className="cdiv"></div>
         </div>
 
     </div>
 
-        
-    </div>
   );
 }
 
-export default ResumeHeader;
+export default ResumeRightColumn;
 

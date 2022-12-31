@@ -15,7 +15,7 @@ import {
 // It takes 
 //1.category 
 //2.query(data) 
-//display bank details in corresponds to the data provided  
+//display employee details in corresponds to the data provided  
 
 
 //There are various cities,categories options provided to the user .

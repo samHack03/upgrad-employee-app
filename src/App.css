@@ -5,14 +5,9 @@
   background-image: url("https://tse2.mm.bing.net/th?id=OIP.D-WDVNtFyymsST7xmLvyBAAAAA&pid=Api&P=0&w=151&h=161")no repeat;
 }
 
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-.banksList{
-  text-decoration: none;
-  list-style: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {

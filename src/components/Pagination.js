@@ -3,7 +3,7 @@ import {Pagination as PaginationComponent} from "@material-ui/lab";
 
 //This functional component is used to add pagination functionality in the application  .
 
-// It takes total banks as the props and displays as per the value 
+// It takes total employees length as the props and displays as per the value 
 // per page provided by the user in the bottom text box filed
 
 
