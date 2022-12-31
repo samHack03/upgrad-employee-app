@@ -96,8 +96,6 @@ const AllEmp = () => {
         </div>
 
 
-
-
         <div className="empsList">
           <EmpList
            empList={paginatedList}

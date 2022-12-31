@@ -7,7 +7,7 @@ import "./css/styles.css";
 import './App.css';
 
 // App is the main component all other components are represented as Child of this component
-//There are five different routes "/admin/dashboard","/resume-app","/","*" for perfroming different functions.
+//There are four different routes "/admin/dashboard","/resume-app","/","*" for perfroming different functions.
 
 function App() {
   return (

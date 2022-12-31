@@ -18,7 +18,7 @@ import {
 //display employee details in corresponds to the data provided  
 
 
-//There are various cities,categories options provided to the user .
+//There are various categories options provided to the user .
 
 const SearchFilter = (props) => {
   const {
@@ -31,12 +31,7 @@ const SearchFilter = (props) => {
     selectedSearchQuery(value)
   }
 
-  //Debounce function is being called from here .
-  const betterFunc =_setData; // added useCallback to memoize function //
-
-  // const _onChangeCity = (e) => {
-  //   selectedCity(e.target.value);
-  // }
+  const betterFunc =_setData;
 
   const _onChangeCategory = (e) => {
     selectedCategory(e.target.value)

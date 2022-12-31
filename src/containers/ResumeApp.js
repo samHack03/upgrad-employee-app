@@ -6,6 +6,7 @@ import ResumeRightColumn from '../components/Resume/ResumeRightColumn';
 
 import '../css/styles.css'
 
+// This is the Component where we have statically made our Resume.
 
 const ResumeApp= (props) =>  {
 
