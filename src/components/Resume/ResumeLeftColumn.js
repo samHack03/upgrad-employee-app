@@ -28,8 +28,10 @@ const ResumeLeftColumn= () =>  {
                 </ul>
         </div>
         <br/>
+        <br/>
         <div className="cdiv"></div>
-     
+        <br/>
+
         <div>
                 <h4>PROJECTS</h4>
                 <p><b>EASYCV</b> | React Application | <a href="https://github.com/Sumant03/ResumeBuilder">Link</a></p>
